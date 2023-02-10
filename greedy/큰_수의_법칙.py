@@ -7,10 +7,11 @@
 기출 : 2019 국가 교육기관 코딩 테스트
 
 큰 수의 법칙은 다양한 수로 이루어진 배열이 있을 때 주어진 수들을 M번 더하여
+
 가장 큰 수를 만드는 법칙이다. 단, 배열 특정한 인덱스( 번호 )에 해당하는 수가 
 연속해서 K번을 초과하여 더해질 수 없는 것이 이 법칙의 특징이다.
 
-예를 들어 순서대로 2,4,5,6으로 이루어진 배열이 있을 때 M이 8이고, K가 2라고 가정하자.
+예를 들어 순서대로 2,4,5,6으로 이루어진 배열이 있을 때 M이 8이고, K가 3이라고 가정하자.
 이 경우 특정한 인덱스의 수가 연속해서 세 번까지만 더해질 수 있으므로 큰 수의 법칙에 따른 결과는
 6 + 6 + 6 + 5 + 6 + 6 + 6 + 5인 46이 된다.
 
@@ -27,7 +28,7 @@
 입력으로 주어지는 K는 항상 M보다 작거나 같다.
 
 -출력 조건-
-첫 째 줄에 Jack Snidee의 큰 수의 법칙에 따라 더해진 답을 출력한다.
+첫 째 줄에 Jack Snider의 큰 수의 법칙에 따라 더해진 답을 출력한다.
 
 -입력 예시-
 5 8 3
@@ -35,10 +36,11 @@
 
 -출력 예시-
 46
+
 '''
 
 # ========================== my try =========================
-n,m,k = input().split( ' ' )
+n,m,k = list( map( int, input().split( ' ' ) ) )
 
 numbers = []
 while True:
@@ -48,7 +50,28 @@ while True:
 	else:
 		print( f'Please input {n} numbers only.' )
 
-print( numbers )
+sum = 0
+max = numbers[ 0 ]
+answes = []
+tmp = 0
+for cnt in range( 0, m ):
+	
+	tmp_list = list( set( numbers ) )
+	tmp_list.sort( reverse = True )
+	if tmp < k:
+		if numbers.count( tmp_list[ 0 ] ) > 1:
+			sum = 1
+			sum *= tmp_list[ 0 ] * m
+			print( f'{tmp_list[ 0 ]} * {m} = {sum}')
+			break
+		sum += tmp_list[ 0 ]
+		print( f'{cnt + 1} : {tmp_list[ 0 ]}' )
+		tmp += 1	
+	else:
+		sum += tmp_list[ 1 ]
+		print( f'{cnt + 1} : {tmp_list[ 1 ]}' )
+		tmp = 0
+print( sum )
 
 # ===========================================================
 

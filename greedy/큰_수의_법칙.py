@@ -55,7 +55,6 @@ while True:
 
 sum = 0
 max = numbers[ 0 ]
-answes = []
 tmp = 0
 for cnt in range( 0, m ):
 	

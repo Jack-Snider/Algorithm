@@ -1,4 +1,7 @@
 '''
+Wirttern by Jack Snider
+First written day. : 2023.02.10
+
 -큰 수의 법칙-
 난이도 : 하
 플이 시간 : 30분

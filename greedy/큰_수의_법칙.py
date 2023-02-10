@@ -54,7 +54,6 @@ while True:
 		print( f'Please input {n} numbers only.' )
 
 sum = 0
-max = numbers[ 0 ]
 tmp = 0
 for cnt in range( 0, m ):
 	

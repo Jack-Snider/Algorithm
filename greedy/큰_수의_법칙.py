@@ -105,3 +105,26 @@ while True:
 print( result ) # 최종 답안 출력			
 	
 # ===========================================================
+
+# ========================== answer =========================
+# Better wat with Math
+# Get input N, M, K by spaces bewteen
+n, m ,k = map( int, input().split() ) 
+# get N numbers of by spaces between
+data = list( map( int, input().split() ) )
+
+data.sort() # sort numbers
+first = data[ n - 1 ] # max number
+second = data[ n - 2 ] # second max number
+
+# get the count of plus max number
+count = int( m / ( k + 1 ))
+count += m % ( k + 1 )
+
+result = 0
+result += ( count ) * first # adding max number
+result += ( m - count ) * second # adding second max number
+
+print( result ) # print final answer
+
+# ===========================================================

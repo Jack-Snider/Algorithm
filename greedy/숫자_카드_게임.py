@@ -52,14 +52,22 @@ M개
 '''
 # ========================== my try =========================
 n,m = list( map( int, input().split() ) )
-print( f'n : {n}' )
-print( f'm : {m}' )
+#print( f'n : {n}' )
+#print( f'm : {m}' )
 cards = []
-for _ in range( m ):
-	n_cards = list( map( int, input().split() ) )
-	cards.append( n_cards )
+for _ in range( n ):
+	m_cards = list( map( int, input().split() ) )
+	cards.append( m_cards )
 	
-print( cards )
+#print( f'cards : {cards}' )
+
+answer = []
+
+for i in cards:
+	#print( f'min : {min( i )}' )
+	answer.append( min( i ) )
+	
+print( max( answer ) )
 
 # ===========================================================
 

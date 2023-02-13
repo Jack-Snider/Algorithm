@@ -107,7 +107,7 @@ print( result ) # 최종 답안 출력
 # ===========================================================
 
 # ========================== answer =========================
-# Better wat with Math
+# Better way with Math
 # Get input N, M, K by spaces bewteen
 n, m ,k = map( int, input().split() ) 
 # get N numbers of by spaces between

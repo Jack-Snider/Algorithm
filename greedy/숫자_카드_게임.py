@@ -71,3 +71,37 @@ print( max( answer ) )
 
 # ===========================================================
 
+# ========================== answer =========================
+# answer with using functions
+n,m = map( int, input().split() )
+
+result = 0
+
+for i in range( n ):
+	data = list( map( int, input().split() ))
+	
+	min_value = min( data )
+	
+	result = max( result, min_value )
+	
+print( result )
+# ===========================================================
+
+# ========================== answer =========================
+# answer with using 'for'
+n,m = map( int, input().split() )	
+
+result = 0
+
+for i in range( n )
+	data = list( map( int, input().split() ) )
+	
+	min_value = 10001
+	for a in data:
+		min_value = min( min_value )
+		
+	result = max( result, min_value )
+	
+print( result )
+# ===========================================================
+

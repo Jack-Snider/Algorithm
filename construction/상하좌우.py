@@ -50,7 +50,7 @@ for moveType in userMap:
             continue
         else:
             y -= 1
-            print( f'moveType : {moveType} = {x},{y}')
+            print( f'moveType : {moveType} = {x},{y}' )
     elif moveType == 'R':
         # R : y + 1
         if y == n:

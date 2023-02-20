@@ -50,7 +50,7 @@ for moveType in userMap:
             continue
         else:
             y -= 1
-            print( f'moveType : {moveType} = {x},{y}' )
+            #print( f'moveType : {moveType} = {x},{y}' )
     elif moveType == 'R':
         # R : y + 1
         if y == n:
@@ -58,7 +58,7 @@ for moveType in userMap:
             continue
         else:
             y += 1
-            print( f'moveType : {moveType} = {x},{y}')
+            #print( f'moveType : {moveType} = {x},{y}')
     elif moveType == 'U':
         # U : x - 1
         if x == 1:
@@ -66,7 +66,7 @@ for moveType in userMap:
             continue
         else:
             x -= 1
-            print( f'moveType : {moveType} = {x},{y}')
+            #print( f'moveType : {moveType} = {x},{y}')
     elif moveType == 'D':
         # D : x + 1
         if x == n:
@@ -74,9 +74,31 @@ for moveType in userMap:
             continue
         else:
             x += 1
-            print( f'moveType : {moveType} = {x},{y}')
+            #print( f'moveType : {moveType} = {x},{y}')
 
 print( f'{x} {y}')
     
 
+# ===========================================================
+
+# ========================== answer =========================
+n = int( input() )
+x,y = 1,1
+plans = input().split()
+
+dx = [ 0,0,-1,1 ]
+dy = [ -1,1,0,0 ]
+move_types = [ 'L','R','U','D' ]
+
+for plan in plans:
+	for i in range( len( move_types ) ):
+		if plan == move_types[ i ]:
+			nx = x + dx[ i ]
+			ny = y + dy[ i ]
+	if nx < 1 or ny < 1 or nx > n or ny > n:
+		continue
+		
+	x,y = nx,ny
+	
+print( x,y )
 # ===========================================================

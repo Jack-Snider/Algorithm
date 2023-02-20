@@ -37,9 +37,15 @@ R R R U D D
 3 4
 
 '''
+import time
+
 # ========================== my try =========================
 n = int( input() )
 userMap = input().split()
+
+# 시간측정 시작
+start_time = time.time()
+
 x,y = 1,1
 for moveType in userMap:
 
@@ -77,7 +83,10 @@ for moveType in userMap:
             #print( f'moveType : {moveType} = {x},{y}')
 
 print( f'{x} {y}')
-    
+
+# 시간측정 종료
+end_time = time.time()
+print( f'my try : {end_time - start_time}' )
 
 # ===========================================================
 
@@ -85,6 +94,9 @@ print( f'{x} {y}')
 n = int( input() )
 x,y = 1,1
 plans = input().split()
+
+# 시간측정 시작
+start_time = time.time()
 
 dx = [ 0,0,-1,1 ]
 dy = [ -1,1,0,0 ]
@@ -101,4 +113,9 @@ for plan in plans:
 	x,y = nx,ny
 	
 print( x,y )
+
+# 시간측정 종료
+end_time = time.time()
+print( f'answer : {end_time - start_time}' )
+
 # ===========================================================

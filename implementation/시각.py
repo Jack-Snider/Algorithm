@@ -30,6 +30,16 @@
 '''
 
 # ========================== my try =========================
+n = int( input() )
+cnt = 0
+for hour in range( 0, n + 1 ):
+	for minute in range( 0,60 ):
+		for second in range( 0,60 ):
+			tmp = f'{hour}:{minute}:{second}'
+			#print( tmp )
+			if '3' in tmp:
+				cnt += 1
+print( cnt )
 # ===========================================================
 
 # ========================== answer =========================

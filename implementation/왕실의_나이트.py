@@ -52,18 +52,7 @@ a1
 x,y = list( input() )
 
 
-left_edge = ord( 'a' )
-right_edge = ord( 'h' )
 
-print( f'left_edge : {left_edge}' )
-print( f'right_edge : {right_edge}' )
-
-# 모서리 : 경우의 수 2개
-for letter in range( left_edge, right_edge + 1 ):
-    for number in range( right_edge - left_edge + 1 ):
-        print( f'{chr(letter)}{number + 1} ', end = '' )
-        
-        
 # ===========================================================
 
 # ========================== answer =========================

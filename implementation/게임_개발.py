@@ -54,7 +54,31 @@
 '''
 # ========================== my try =========================
 def move( direction , location ):
-	pass
+	
+	# parameter direction should be in range 0 ~ 3
+	if int( direction ) not in( 0,3 + 1 ):
+		return '[ WARNING ] : direction must be in range 0 ~ 3'
+	
+	
+	# parameter location should be list type with length 2 only
+	if len( location ) != 2:
+		return '[ WARNING ] : length of location must be 2 only'
+		
+	# begins
+	if direction == '0': # North
+		# y : -1
+		pass
+	elif direction == '1': # East
+		# x : +1
+		pass
+	elif direction == '2': # South
+		# y : +1
+		pass
+	elif direction == '3': # West
+		# x : -1
+		pass
+	else:
+		return '[ WARNING ] : wrong parameter'
 	
 n,m = input().split()
 dx,dy,direction = input().split()

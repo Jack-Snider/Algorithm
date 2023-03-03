@@ -53,6 +53,9 @@
 
 '''
 # ========================== my try =========================
+def move( direction , location ):
+	pass
+	
 n,m = input().split()
 dx,dy,direction = input().split()
 # ===========================================================

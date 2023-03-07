@@ -78,7 +78,7 @@ def move( direction , location ):
 		# x : -1
 		pass
 	else:
-		return '[ WARNING ] : wrong parameter'
+		return '[ WARNING ] : Direction parameter'
 	
 n,m = input().split()
 dx,dy,direction = input().split()

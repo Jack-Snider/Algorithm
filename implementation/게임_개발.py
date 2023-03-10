@@ -81,7 +81,10 @@ def move( direction , location ):
 		return '[ WARNING ] : Direction parameter'
 	
 n,m = input().split()
-dx,dy,direction = input().split()
+dx,dy,direction = input().split() # for facing direvtion
+
+
+
 # ===========================================================
 
 # ========================== answer =========================

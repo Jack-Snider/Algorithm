@@ -55,6 +55,9 @@
 # ========================== my try =========================
 def move( direction , location ): # function for every move
 	
+	dx = location[ 0 ] # x
+	dy = location[ 1 ] # y
+	
 	# parameter direction should be in range 0 ~ 3
 	if int( direction ) not in( 0,3 + 1 ):
 		return '[ WARNING ] : direction must be in range 0 ~ 3'
@@ -67,16 +70,20 @@ def move( direction , location ): # function for every move
 	# begins
 	if direction == '0': # North
 		# y : -1
-		pass
+		dy -= 1
+		return list( ( dx,dy ) )
 	elif direction == '1': # East
 		# x : +1
-		pass
+		dx += 1
+		return list( ( dx,dy ) )
 	elif direction == '2': # South
 		# y : +1
-		pass
+		dy += 1
+		return list( ( dx,dy ) )
 	elif direction == '3': # West
 		# x : -1
-		pass
+		dx -= 1
+		return list( ( dx,dy ) )
 	else:
 		return '[ WARNING ] : Direction parameter'
 	

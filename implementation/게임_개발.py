@@ -53,7 +53,7 @@
 
 '''
 # ========================== my try =========================
-def move( direction , location ):
+def move( direction , location ): # funcntion for every move
 	
 	# parameter direction should be in range 0 ~ 3
 	if int( direction ) not in( 0,3 + 1 ):

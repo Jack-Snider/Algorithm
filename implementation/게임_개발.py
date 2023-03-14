@@ -53,7 +53,7 @@
 
 '''
 # ========================== my try =========================
-def move( direction , location ): # funcntion for every move
+def move( direction , location ): # function for every move
 	
 	# parameter direction should be in range 0 ~ 3
 	if int( direction ) not in( 0,3 + 1 ):
@@ -81,7 +81,7 @@ def move( direction , location ): # funcntion for every move
 		return '[ WARNING ] : Direction parameter'
 	
 n,m = input().split() # variables for current location
-dx,dy,direction = input().split() # for facing direvtion
+dx,dy,direction = input().split() # for facing direction
 
 
 

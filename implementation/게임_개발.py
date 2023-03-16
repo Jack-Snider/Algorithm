@@ -86,7 +86,39 @@ def move( direction , location ): # function for every move
 		return list( ( dx,dy ) )
 	else:
 		return '[ WARNING ] : Direction parameter'
+
+
+def sea_check( next_step, game_map ):
+	# check if the next step to go is sea or not
+	# parameter next_step must be list or tuple like ( x, y )
+	# parameter game_map is the map of this game
 	
+	# retyrn type is bool
+	# if sea, True. if not, False.
+	
+	pass
+	
+def went_already( next_step, game_map ):
+	# check if you already have been  to the location you are about to go
+	# in this function, save every location you have been to
+	
+	# parameter next_step is the location you are about to go
+	# parameter game_map is the map of this game
+	
+	# return type is bool
+	
+	# if you have been already, True. if you haven't been yet, False.
+	
+	pass
+	
+def movable( is_sea, has_been ):
+	
+	# is_sea = sea_check( nexts_step, game_map )
+	# has_been = went_already( next_step, game_map )
+	
+	# return type is bool
+	# if the next_step is movable, True. if not, False 
+
 n,m = input().split() # variables for current location
 dx,dy,direction = input().split() # for facing direction
 

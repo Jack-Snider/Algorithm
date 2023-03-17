@@ -55,6 +55,9 @@
 # ========================== my try =========================
 def move( direction , location ): # function for every move
 	
+	# return type : list
+	# return [ x,y,facing direction ] -> x,y are location
+	
 	dx = location[ 0 ] # x
 	dy = location[ 1 ] # y
 	
@@ -96,7 +99,17 @@ def sea_check( next_step, game_map ):
 	# retyrn type is bool
 	# if sea, True. if not, False.
 	
-	pass
+	if len( next_step ) == 2:
+		next_step_x = next_step[ 0 ]
+		next_step_y = next_step[ 1 ]
+		if game_map[ next_step_x ][next_step_y ] == 1:
+			return True # if sea
+		else:
+			return False # if not sea
+			
+	return True # default is True
+			
+		
 	
 def went_already( next_step, game_map ):
 	# check if you already have been  to the location you are about to go

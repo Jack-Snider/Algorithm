@@ -122,7 +122,7 @@ def went_already( next_step, game_map ):
 	
 	# if you have been already, True. if you haven't been yet, False.
 	
-	# Yo have to save every move made
+	# You have to save every move made
 	
 	pass
 	

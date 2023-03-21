@@ -111,27 +111,43 @@ def sea_check( next_step, game_map ):
 			
 		
 	
-def went_already( next_step, game_map ):
-	# check if you already have been  to the location you are about to go
-	# in this function, save every location you have been to
+def save_move( next_step, game_map ):
 	
-	# parameter next_step is the location you are about to go ( type - list )
-	# parameter game_map is the map of this game ( type - 2D list )
+	# 0 : not has been to
+	# 1 : has been to
 	
-	# return type is bool
-	
-	# if you have been already, True. if you haven't been yet, False.
-	
-	# You have to save every move made
+	flag = False
+	x_flag = False
+	y_flag = False
 	
 	if len( next_step ) == 2:
 		next_step_x = next_step[ 0 ]
 		next_step_y = next_step[ 1 ]
 		
 		# Check if the next_step_x and next_step_y are in the range of game_map 
-	
-	
-	
+		if next_step_x in range( len( game_map[ 0 ] ) ):
+			print( 'x is in range')
+			x_flag = True
+		else:
+			print( 'x is out of range' )
+		
+		if next_step_y in range( len( game_map ) ):
+			print( 'y is in range' )
+			y_flag = True
+		else:
+			print( 'y is out of range' )
+		
+		if x_flag and y_flag:
+			flag = True
+			
+		if flag:
+			game_map[ next_step_x ][ next_step_y ] = 1
+		
+		
+	else:
+		print( 'Wrong parameter' )
+		
+		
 def movable( is_sea, has_been ):
 	
 	# is_sea = sea_check( nexts_step, game_map )

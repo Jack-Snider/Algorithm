@@ -115,8 +115,8 @@ def went_already( next_step, game_map ):
 	# check if you already have been  to the location you are about to go
 	# in this function, save every location you have been to
 	
-	# parameter next_step is the location you are about to go
-	# parameter game_map is the map of this game
+	# parameter next_step is the location you are about to go ( type - list )
+	# parameter game_map is the map of this game ( type - 2D list )
 	
 	# return type is bool
 	
@@ -124,7 +124,13 @@ def went_already( next_step, game_map ):
 	
 	# You have to save every move made
 	
-	pass
+	if len( next_step ) == 2:
+		next_step_x = next_step[ 0 ]
+		next_step_y = next_step[ 1 ]
+		
+		# Check if the next_step_x and next_step_y are in the range of game_map 
+	
+	
 	
 def movable( is_sea, has_been ):
 	
@@ -133,11 +139,15 @@ def movable( is_sea, has_been ):
 	
 	# return type is bool
 	# if the next_step is movable, True. if not, False 
-
+	pass
+	
 n,m = input().split() # variables for current location
 dx,dy,direction = input().split() # for facing direction
 
+game_map = [ [ 0 ] * int( n ) for _ in range( int( m ) ) ] # create 2D list of game map
 
+print( game_map )
+print( len(game_map[0]))
 
 # ===========================================================
 

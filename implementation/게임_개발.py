@@ -58,6 +58,9 @@ def move( direction , location ): # function for every move
 	# return type : list
 	# return [ x,y,facing direction ] -> x,y are location
 	
+	# after you move, you have to save your movement
+	# ( use save_move() function )
+	
 	dx = location[ 0 ] # x
 	dy = location[ 1 ] # y
 	

@@ -53,7 +53,7 @@
 
 '''
 # ========================== my try =========================
-def move( direction , location ): # function for every move
+def move( direction , location, game_map ): # function for every move
 	
 	# return type : list
 	# return [ x,y,facing direction ] -> x,y are location
@@ -75,8 +75,13 @@ def move( direction , location ): # function for every move
 		
 	# begins
 	if direction == '0': # North
-		# y : -1
-		dy -= 1
+		# movable()
+		if movable( sea_check(), game_map ):
+			# y : -1
+			dy -= 1
+			# save_move()
+			game_map = save_move( list( dx, dy ), game_map )
+		
 		return list( ( dx,dy ) )
 	elif direction == '1': # East
 		# x : +1
@@ -145,6 +150,7 @@ def save_move( next_step, game_map ):
 			
 		if flag:
 			game_map[ next_step_x ][ next_step_y ] = 1
+			return game_map
 		
 		
 	else:

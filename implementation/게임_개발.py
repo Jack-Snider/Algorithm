@@ -51,6 +51,8 @@
 - 출력 예시 -
 3
 
+
+test
 '''
 # ========================== my try =========================
 def move( direction , location, game_map ): # function for every move
